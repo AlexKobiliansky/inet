@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+        xmlns:dc="http://purl.org/dc/elements/1.1/"
+        xmlns:cc="http://creativecommons.org/ns#"
+        xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+        xmlns:svg="http://www.w3.org/2000/svg"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+        xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+        version="1.1"
+        id="svg29"
+        xml:space="preserve"
+        width="29.779333"
+        height="29.7812"
+        viewBox="0 0 29.779333 29.7812"
+        sodipodi:docname="telegram-icon.svg"
+        inkscape:version="0.92.4 (unknown)">
+    <defs
+            id="defs33"><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath45"><path
+         d="M 0,22.336 H 22.334 V 0 H 0 Z"
+         id="path43"
+         inkscape:connector-curvature="0" /></clipPath></defs>
+    <g
+            id="g37"
+            inkscape:groupmode="layer"
+            inkscape:label="telegram-icon"
+            transform="matrix(1.3333333,0,0,-1.3333333,0,29.7812)"><g
+       id="g39"><g
+         id="g41"
+         clip-path="url(#clipPath45)"><g
+           id="g47"
+           transform="translate(2.5586,19.7783)"><path
+             d="m 0,0 5.145,-15.848 2.91,7.239 c 0.101,0.253 0.3,0.453 0.554,0.554 l 7.237,2.907 z m 5.045,-19.778 c -0.01,0 -0.022,0 -0.033,0 -0.422,0.015 -0.787,0.291 -0.918,0.691 L -2.51,1.249 c -0.115,0.357 -0.021,0.75 0.244,1.016 0.268,0.265 0.664,0.36 1.016,0.244 l 20.334,-6.607 c 0.4,-0.13 0.678,-0.496 0.691,-0.917 0.014,-0.421 -0.236,-0.805 -0.627,-0.962 l -9.398,-3.774 -3.777,-9.4 c -0.153,-0.38 -0.52,-0.627 -0.928,-0.627"
+             style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path49"
+             inkscape:connector-curvature="0" /></g><g
+            id="g51"
+            transform="translate(11.541,9.7959)"><path
+             d="m 0,0 c -0.256,0 -0.512,0.098 -0.707,0.293 l -10.541,10.54 c -0.391,0.391 -0.391,1.023 0,1.414 0.391,0.391 1.023,0.391 1.414,0 L 0.707,1.707 C 1.098,1.316 1.098,0.684 0.707,0.293 0.512,0.098 0.256,0 0,0"
+             style="fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path53"
+             inkscape:connector-curvature="0" /></g></g></g></g></svg>

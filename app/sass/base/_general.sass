@@ -50,6 +50,7 @@ a:hover, a:active, a:focus
 a
   color: $accent
   text-decoration: none
+  +mt(.3s)
 
 a, li, button
   outline: none!important
@@ -62,5 +63,72 @@ ul
 .hidden
   display: none!important
 // ======= END TEMPLATE STYLES =======
+
+.jq-selectbox__select
+  font-size: 14px
+  line-height: 1
+  height: auto
+  background: #ebebeb
+  padding: 11px 30px 11px 20px
+  font-weight: 700
+  text-shadow: none
+  box-shadow: none
+  width: 175px
+  border: none
+  &:hover
+    background: #ebebeb
+
+.jq-selectbox.focused .jq-selectbox__select
+  border: none
+
+.jq-selectbox.opened
+  .jq-selectbox__trigger-arrow
+    transform: rotate(180deg)
+
+.jq-selectbox__select-text
+  width: auto!important
+
+.jq-selectbox__trigger
+  border-left: none
+
+.jq-selectbox__trigger-arrow
+  border: none
+  width: 9px
+  height: 5px
+  background-image: url('../img/icons/select-arrow.svg')
+  right: 19px
+  top: calc(50% - 2.5px)
+  +bg-cover
+
+.jq-selectbox li:hover
+  background-color: #02537e
+
+
+.btn
+  display: inline-block
+  cursor: pointer
+  line-height: 1
+  white-space: nowrap
+  border-radius: 5px
+  text-align: center
+  min-width: 165px
+  padding: 16px
+  +mt(.3s)
+  border-width: 1px
+  border-style: solid
+  border-color: transparent
+
+.btn-transparent
+  color: #000
+  border-color: #000
+  &:hover
+    border-color: $accent
+    background-color: $accent
+    color: #fff
+
+.btn-white
+  background-color: #fff
+  color: #000!important
+
 
 

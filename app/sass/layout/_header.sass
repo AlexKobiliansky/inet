@@ -1,0 +1,193 @@
+.top-line
+  line-height: 1
+  background-color: #ebebeb
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  .jq-selectbox__select
+    width: 145px
+
+.top-links-1
+  ul
+    font-size: 0
+  li
+    display: inline
+    &.active
+      a
+        border-color: #000
+        color: #000
+    &:last-child
+      a
+        margin-right: 0
+    a
+      display: inline-block
+      font-weight: 700
+      padding: 15px 5px 15px
+      border-top: 3px solid transparent
+      +mt(.5s)
+      color: #878787
+      font-size: 14px
+      margin-right: 30px
+      &:hover
+        border-color: #000
+        color: #000
+
+
+.top-links-2
+  display: inline-block
+  li
+    display: inline-flex
+    margin-left: 40px
+    &.ative
+      a
+        color: #000
+    &:first-child
+      margin-left: 0
+    a
+      font-weight: 700
+      color: #878787
+      &:hover
+        color: #000
+  .svg
+    height: 15px
+    width: auto
+    fill: #8e8e8e
+    margin-right: 10px
+
+.telegram-link
+  display: inline-flex
+  align-items: center
+  .svg
+    height: 17px
+    width: auto
+    fill: #00d7e1
+    margin-right: 10px
+  a
+    color: #000
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+.telegram-top
+  margin-left: 100px
+
+.nav-form
+  label
+    margin-bottom: 0
+
+
+.mnu-line
+  padding: 25px 0
+  .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+  &-right
+    display: flex
+    align-items: center
+    .btn
+      margin-left: 48px
+
+.main-mnu
+  li
+    display: inline-block
+    margin: 0 22px
+    &:first-child
+      margin-left: 0
+    &:last-child
+      margin-right: 0
+    a
+      color: #000
+      &:hover
+        color: $accent
+
+
+.head-contacts
+  display: inline-block
+  .tel
+    display: block
+    font-size: 16px
+    color: #000
+    margin-bottom: 6px
+    &:hover
+      color: $accent
+  .recall
+    color: #878787
+    text-decoration: underline
+    &:hover
+      text-decoration: none
+
+.hamburger
+  padding: 0
+  position: relative
+  transform: scale(-1, 1)
+
+
+.hamburger-box
+  width: 30px
+
+.hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+  width: 30px
+  height: 3px
+
+.hamburger-inner:before
+  top: -8px
+
+.hamburger--collapse .hamburger-inner:after
+  top: -16px
+
+.hamburger--collapse .hamburger-inner
+  width: 20px
+  transition: all .13s cubic-bezier(.55,.055,.675,.19) .13s
+
+
+.hamburger--collapse.is-active .hamburger-inner
+  width: 30px
+
+
+//mobile-mnu customization
+.mm-navbar
+  padding: 30px
+  height: auto
+  background: transparent
+  border-color: #fff
+  img
+    width: 158px
+    height: 32px
+    padding: 0
+    margin-left: auto
+    margin-right: auto
+
+.mm-navbars_top
+  border-color: rgba(255, 255, 255, 0.7)
+
+.mm-panels
+  background: $accent
+  ul
+    padding: 30px
+  li
+    font-size: 16px
+    margin-bottom: 10px
+    text-align: center
+  .btn-wrap
+    text-align: center
+
+.mm-panel
+  background: transparent
+
+.mm-menu_theme-dark
+  background-color: $accent
+
+.mnu-head-contacts
+  font-size: 16px
+  text-align: center
+  margin-bottom: 20px
+  .tel
+    font-size: 20px
+    display: block
+    margin-bottom: 6px
+  .recall
+    text-decoration: underline!important
+
+
