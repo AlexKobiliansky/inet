@@ -8,14 +8,59 @@
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .intro-img
+    right: 0
+
+  .intro-wrap
+    padding: 50px 0
+    &-text
+      width: 60%
+    h1
+      font-size: 32px
+
   .telegram-top
     margin-left: 0
 
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .intro-img
+    right: -8px
+    top: 20px
+
+  .intro-wrap
+    padding: 35px 0
+    p
+      font-size: 14px
+
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .intro-wrap
+    h1
+      font-size: 28px
+    p
+      margin-bottom: 30px
+
+  .intro-img
+    max-width: 260px
+    top: 55px
+
+  .s-intro
+    padding-bottom: 60px
+
+@media (max-width: 400px)
+  .intro-img
+    display: none
+
+  .intro-wrap
+    text-align: center
+    &-text
+      width: 100%
+    h1
+      font-size: 26px
+
 
 
 /*==========  Mobile First  ==========*/
