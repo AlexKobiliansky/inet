@@ -94,6 +94,16 @@ $(document).ready(function(){
         autoWidth: true
     });
 
+    $('.news-slider').owlCarousel({
+        nav: false,
+        items: 1,
+        margin: 30,
+        dots: false,
+        autoHeight: true,
+        autoWidth: true,
+        loop: true
+    });
+
     $( "#tar-tabs" ).tabs();
 
     function heightses() {

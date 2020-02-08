@@ -1,0 +1,36 @@
+.s-news
+  background-color: #f8f8f8
+  padding: 55px 0 65px
+  h2
+    font-size: 30px
+    margin-bottom: 45px
+    font-weight: normal
+  .btn-wrap
+    margin-top: 50px
+    text-align: center
+
+.news-item
+  position: relative
+  border-radius: 5px
+  overflow: hidden
+  +bg-cover
+  height: 290px
+  &-wrap
+    position: absolute
+    bottom: 0
+    left: 0
+    padding: 25px 20px
+  &-date
+    font-size: 12px
+    color: #000
+    opacity: .5
+    margin-bottom: 10px
+  &-title
+    color: #000
+    font-weight: 700
+    line-height: 1.7
+    &:hover
+      text-decoration: underline
+  &.white-txt
+    .news-item-title, .news-item-date
+      color: #fff
