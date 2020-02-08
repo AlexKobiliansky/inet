@@ -118,7 +118,43 @@ $(document).ready(function(){
 
     /** FORMS START */
 
-    $('.form-select').styler();
+    $('.form-select, input[type="radio"]').styler();
+
+    $('.radio-wrap label').on('click', function(){
+       var th = $(this);
+
+       th.addClass('checked');
+       th.siblings('label').removeClass('checked');
+    });
+
+    var uPhone = $('.user-phone');
+    uPhone.mask("+7 (999) 999-99-99",{autoclear: false});
+
+    uPhone.on('click', function (ele) {
+        var needelem = ele.target || event.srcElement;
+        needelem.setSelectionRange(4,4);
+        needelem.focus();
+    });
+
+    $.validate({
+        form : '.contact-form',
+        scrollToTopOnError: false
+    });
+
+    $('.next-stage').on('click', function(e){
+        e.preventDefault();
+
+        $('#mobile-name-input').validate(function(valid, elem) {
+            if (valid === true) {
+                $('#mobile-phone-input').validate(function(valid, elem) {
+                    if (valid === true) {
+                        $('.mobile-block-1').hide();
+                        $('.mobile-block-2').show();
+                    }
+                });
+            }
+        });
+    });
 
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change

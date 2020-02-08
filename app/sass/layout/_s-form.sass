@@ -1,0 +1,137 @@
+.s-form
+  background-color: #f8f8f8
+
+form
+  background-color: #fff
+  h3
+    font-size: 24px
+    font-weight: normal
+    margin-bottom: 10px
+  p
+    font-size: 12px
+    color: #878787
+    margin-bottom: 35px
+  label
+    display: block
+    margin-bottom: 30px
+  input
+    line-height: 1
+    color: #000
+    padding: 17px 25px
+    border: 1px solid #d1d1d1
+    border-radius: 3px
+    width: 100%
+    &.error
+      border-color: red!important
+      color: red!important
+      &::placeholder
+        color: red!important
+  .help-block
+    display: none
+
+.body-form
+  border-radius: 8px
+  padding: 40px 95px 40px 40px
+  .radio-wrap
+    font-size: 16px
+    margin-bottom: 40px
+    label
+      display: inline-flex
+      align-items: center
+      margin-bottom: 0
+      cursor: pointer
+      margin-right: 40px
+      color: #878787
+      &.checked
+        color: #000
+      &:last-child
+        margin-right: 0
+  .form-labels-wrap
+    display: flex
+    justify-content: space-between
+  .form-left
+    width: 230px
+  .form-right
+    width: calc(100% - 260px)
+  .labels-wrap
+    display: flex
+    justify-content: space-between
+    label
+      width: calc(50% - 15px)
+  .btn
+    width: 100%
+  .form-policy
+    margin-top: 5px
+    font-size: 12px
+    a
+      color: #02537e
+      text-decoration: underline
+      &:hover
+        text-decoration: none
+
+  .jq-selectbox__select
+    //height: auto
+    background: transparent
+    padding: 18px 30px 18px 25px
+    font-weight: normal
+    width: 100%
+    border: 1px solid #d1d1d1
+    border-radius: 3px
+    color: #878787
+    &:hover
+      background: transparent
+  .jq-selectbox__trigger-arrow
+    opacity: .5
+  .jq-selectbox
+    width: 100%
+  .jq-selectbox.focused .jq-selectbox__select
+    border: 1px solid #d1d1d1
+
+
+.jq-radio
+  width: 15px
+  height: 15px
+  background: transparent
+  border: 1px solid #878787
+  margin-right: 8px
+  position: relative
+  top: -2px
+  overflow: visible
+  &.checked
+    border-color: #00cfdc
+
+.jq-radio.checked .jq-radio__div
+  width: 14px
+  height: 11px
+  border-radius: 0
+  box-shadow: none
+  background-color: transparent
+  background-image: url('../img/icons/radio-arrow.svg')
+  +bg-cover
+  margin: -1px 0 0 2px
+
+
+.tech-item
+  background-color: #fff
+  display: flex
+  flex-direction: column
+  position: relative
+  height: 211px
+  margin-bottom: 30px
+  border-radius: 8px
+  padding: 30px
+  justify-content: space-between
+  &-title
+    font-size: 20px
+    line-height: 1.5
+  &-img
+    position: absolute
+    right: 20px
+    bottom: 30px
+  &:last-child
+    margin-bottom: 0
+  a
+    color: #02537e
+    text-decoration: underline
+    &:hover
+      text-decoration: none

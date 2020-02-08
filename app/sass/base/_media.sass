@@ -5,9 +5,21 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+  .body-form
+    padding-right: 40px
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .body-form
+    margin-bottom: 30px
+
+  .tech-items-wrap
+    display: flex
+    justify-content: space-between
+
+  .tech-item
+    width: calc(50% - 15px)
 
   .intro-img
     right: 0
@@ -25,6 +37,21 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .body-form
+    .form-labels-wrap
+      flex-direction: column
+    .form-part
+      width: 100%
+    .btn
+      margin-bottom: 6px
+
+  .tech-items-wrap
+    flex-wrap: wrap
+
+  .tech-item
+    width: 100%
+    margin-bottom: 30px
+
   .intro-img
     right: -8px
     top: 20px
@@ -36,6 +63,51 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .mobile-block-2
+    display: none
+
+  .body-form
+    padding: 35px 25px
+    label
+      margin-bottom: 15px
+      &.mb
+        margin-bottom: 30px
+    .jq-selectbox__select
+      font-size: 14px
+      line-height: 1
+      height: auto
+      background: #ebebeb
+      padding: 11px 30px 11px 20px
+      font-weight: 700
+      text-shadow: none
+      box-shadow: none
+      width: 175px
+      border: none
+      color: #000
+      &:hover
+        background: #ebebeb
+    .jq-selectbox.focused .jq-selectbox__select
+      border: none
+
+    .jq-selectbox.opened
+      .jq-selectbox__trigger-arrow
+        transform: rotate(180deg)
+
+    .jq-selectbox__select-text
+      width: auto!important
+
+    .jq-selectbox__trigger
+      border-left: none
+
+    .jq-selectbox__trigger-arrow
+      border: none
+      width: 9px
+      height: 5px
+      background-image: url('../img/icons/select-arrow.svg')
+      right: 19px
+      top: calc(50% - 2.5px)
+      +bg-cover
 
   .tar-item
     width: 280px

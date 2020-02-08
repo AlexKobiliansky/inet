@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="svg182"
+   xml:space="preserve"
+   width="24.691999"
+   height="18.241999"
+   viewBox="0 0 24.691999 18.241999"
+   sodipodi:docname="radio-arrow.svg"
+   inkscape:version="0.92.4 (unknown)"><defs
+     id="defs186"><clipPath
+       clipPathUnits="userSpaceOnUse"
+       id="clipPath198"><path
+         d="M 0,23.552 H 24.451 V 0 H 0 Z"
+         id="path196"
+         inkscape:connector-curvature="0" /></clipPath></defs><g
+     id="g190"
+     inkscape:groupmode="layer"
+     inkscape:label="radio-arrow"
+     transform="matrix(1.3333333,0,0,-1.3333333,62.855354,14.874861)"><g
+       id="g192"
+       transform="translate(-55.792415,-6.0284177)"><g
+         id="g194"
+         clip-path="url(#clipPath198)"
+         transform="translate(2.7186981,-3.7825365)"><g
+           id="g204"
+           transform="translate(11.7717,7.2856)"><path
+             d="m 0,0 c -0.266,0 -0.52,0.105 -0.707,0.293 l -4.84,4.842 c -0.39,0.39 -0.39,1.024 0,1.414 0.391,0.39 1.024,0.39 1.414,0 L 0,2.415 10.973,13.389 c 0.39,0.39 1.023,0.39 1.414,0 0.39,-0.391 0.39,-1.024 0,-1.414 L 0.707,0.293 C 0.52,0.105 0.266,0 0,0"
+             style="fill:#00cfdc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+             id="path206"
+             inkscape:connector-curvature="0" /></g></g></g></g></svg>
