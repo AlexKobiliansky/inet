@@ -85,6 +85,36 @@ $(document).ready(function(){
         }, 'xml');
     });
 
+    $('.tar-slider').owlCarousel({
+        nav: false,
+        items: 1,
+        margin: 30,
+        dots: false,
+        autoHeight: true,
+        autoWidth: true
+    });
+
+    $( "#tar-tabs" ).tabs();
+
+    function heightses() {
+        if ($(window).width()<480) {
+
+        }
+
+        $('.tar-item-title').height('auto').equalHeights();
+        $('.tar-item-speedline').height('auto').equalHeights();
+
+    }
+
+
+
+
+    $(window).resize(function() {
+        heightses();
+    });
+
+    heightses();
+
 
     /** FORMS START */
 

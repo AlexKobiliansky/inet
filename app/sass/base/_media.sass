@@ -37,6 +37,48 @@
 // ≥480px
 +media-breakpoint-down(xs)
 
+  .tar-item
+    width: 280px
+
+  .tar-slider
+    width: calc(100% + 15px)
+
+  .s-tarifs
+    padding-top: 55px
+    border-top-left-radius: 30px
+    border-top-right-radius: 30px
+    overflow: hidden
+    position: relative
+    top: -30px
+    margin-bottom: -30px
+    h3
+      font-size: 18px
+
+  .tar-tabs-controls
+    display: flex
+    overflow-x: scroll
+    -ms-overflow-style: none  /* Internet Explorer 10+ */
+    scrollbar-width: none
+    &::-webkit-scrollbar
+      display: none
+    &:after
+      display: none
+    li
+      margin-right: 30px
+    a
+      font-size: 14px
+      padding: 15px
+      width: 150px
+      background-color: #efefef
+      text-align: center
+      border-radius: 5px
+    li.ui-tabs-active
+      a
+        background-color: $accent
+        color: #fff
+        border-bottom: none
+
+
   .intro-wrap
     h1
       font-size: 28px
@@ -44,13 +86,17 @@
       margin-bottom: 30px
 
   .intro-img
-    max-width: 260px
+    max-width: 300px
     top: 55px
 
   .s-intro
     padding-bottom: 60px
 
 @media (max-width: 400px)
+
+  .s-intro
+    padding-bottom: 30px
+
   .intro-img
     display: none
 
