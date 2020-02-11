@@ -27,7 +27,17 @@
 </head>
 
 <body>
-
+<!-- preloader -->
+<div class="preloader">
+	<div class="sk-wave">
+		<div class="sk-rect sk-rect-1"></div>
+		<div class="sk-rect sk-rect-2"></div>
+		<div class="sk-rect sk-rect-3"></div>
+		<div class="sk-rect sk-rect-4"></div>
+		<div class="sk-rect sk-rect-5"></div>
+	</div>
+</div>
+<!-- /preloader -->
 <div class="page-wrapper">
 	<div id="mobile-mnu" data-logo="img/logo.png">
 		<div>
@@ -41,7 +51,7 @@
 
 			<div class="mnu-head-contacts">
 				<a href="tel:+74951444845" class="tel">+7 (495) 144-48-45</a>
-				<a href="#0" class="recall">Заказать звонок</a>
+				<a href="#popup-form" class="recall">Заказать звонок</a>
 			</div>
 
 			<div class="btn-wrap">
@@ -94,7 +104,14 @@
 
 					<div class="telegram-link telegram-top">
 						<img src="img/icons/telegram-icon.svg" alt="alt" class="svg">
-						<a href="#0">Мосрентген</a>
+						<a href="#0" class="city">Мосрентген</a>
+						<div class="city-popup">
+							<a href="#0">Мосрентген</a>
+							<a href="#0">Красная Пахра, Шишкин Лес</a>
+							<a href="#0">Троицк</a>
+							<a href="#0">Кокошкино, Марушкино, Крешкино</a>
+							<a href="#0">Воскресенское</a>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -116,7 +133,7 @@
 				<div class="mnu-line-right d-none d-xl-flex">
 					<div class="head-contacts">
 						<a href="tel:+74951444845" class="tel">+7 (495) 144-48-45</a>
-						<a href="#0" class="recall">Заказать звонок</a>
+						<a href="#popup-form" class="recall">Заказать звонок</a>
 					</div>
 					<a href="#0" class="btn btn-transparent">Личный кабинет</a>
 				</div>
@@ -638,7 +655,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-8">
-					<form class="contact-form body-form">
+					<form class="contact-form body-form d-none d-sm-block">
 						<!-- Hidden Required Fields -->
 						<input type="hidden" name="project_name" value="Айнет.Ру">
 						<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
@@ -649,13 +666,13 @@
 
 						<p>С вами свяжется менеджер и поможет подобрать тариф</p>
 
-						<div class="radio-wrap d-none d-sm-block">
+						<div class="radio-wrap">
 							<label class="checked"><input type="radio" name="Услуга" value="Интернет" checked> Интернет<br></label>
 							<label><input type="radio" name="Услуга" value="Интернет + ТВ"> Интернет + ТВ<br></label>
 							<label><input type="radio" name="Услуга" value="Телефония"> Телефония<br></label>
 						</div>
 
-						<div class="form-labels-wrap d-none d-sm-flex">
+						<div class="form-labels-wrap">
 							<div class="form-left form-part">
 								<label>
 									<input id="test-input" type="text" placeholder="Ваше имя" name="Имя" autocomplete="off" data-validation="custom"
@@ -689,17 +706,29 @@
 							</div>
 						</div>
 
-						<div class="form-labels-wrap d-none d-sm-flex">
+						<div class="form-labels-wrap">
 							<div class="form-left form-part">
-								<button type="submit" class="btn btn-accent">Отправить</button>
+								<button type="submit" class="btn btn-accent btn-submit">Отправить</button>
 							</div>
 							<div class="form-right form-part">
 								<div class="form-policy">Нажимая кнопку, вы соглашаетесь на обработку <a href="#0">персональных данных</a></div>
 							</div>
 						</div>
+					</form>
 
 
-						<div class="mobile-form-wrap d-block d-sm-none">
+					<form class="contact-form body-form d-block d-sm-none">
+						<!-- Hidden Required Fields -->
+						<input type="hidden" name="project_name" value="Айнет.Ру">
+						<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+						<input type="hidden" name="form_subject" value="Заявка с сайта Айнет.Ру">
+						<!-- END Hidden Required Fields -->
+
+						<h3>Подключить услугу</h3>
+
+						<p>С вами свяжется менеджер и поможет подобрать тариф</p>
+
+						<div class="mobile-form-wrap">
 							<div class="mobile-block-1">
 								<label class="mb">
 									<select name="Услуга" class="form-select">
@@ -743,7 +772,7 @@
 								</label>
 
 								<div class="btn-wrap">
-									<button type="submit" class="btn btn-accent">Отправить</button>
+									<button type="submit" class="btn btn-accent btn-submit">Отправить</button>
 								</div>
 							</div>
 						</div>
@@ -868,9 +897,106 @@
 		</div>
 	</section>
 	<!-- ======= SECTION NEWS END ======= -->
+
+	<!-- ======= FOOTER START ======= -->
+	<footer class="main-foot">
+		<div class="container">
+			<div class="footer-wrap">
+				<div class="foot-left foot-item">
+					<div class="foot-call-span d-lg-none">Служба поддержки</div>
+					<a href="tel:+74951444845" class="foot-call">+7 (495) 144-48-45</a>
+					<a href="#0" class="btn btn-accent foot-acc d-lg-none">Личный кабинет</a>
+					<a href="#popup-form" class="btn btn-transparent foot-recall">Заказать звонок</a>
+					<div class="copyright">&copy; ООО "Айнет.ру" 2019-2020</div>
+				</div>
+				<div class="foot-mid foot-item">
+					<div class="foot-mnu-wrap">
+						<h3>Услуги</h3>
+						<nav class="foot-mnu">
+							<ul>
+								<li><a href="#0">Для дома</a></li>
+								<li><a href="#0">Для бизнеса</a></li>
+								<li><a href="#0">Коттеджи</a></li>
+							</ul>
+						</nav>
+					</div>
+
+					<div class="foot-mnu-wrap">
+						<h3>Айнет</h3>
+						<nav class="foot-mnu">
+							<ul>
+								<li><a href="#0">Акции</a></li>
+								<li><a href="#0">Новости</a></li>
+								<li><a href="#0">Контакты</a></li>
+								<li><a href="#0">Способы олпаты</a></li>
+								<li><a href="#0">Техническое обслуживание</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="foot-right foot-item d-none d-lg-flex">
+					<a href="#0" class="btn btn-accent">Личный кабинет</a>
+					<div class="telegram-link telegram-foot">
+						<img src="img/icons/telegram-icon.svg" alt="alt" class="svg">
+						<a href="#0">Мосрентген</a>
+
+						<div class="city-popup">
+							<a href="#0">Мосрентген</a>
+							<a href="#0">Красная Пахра, Шишкин Лес</a>
+							<a href="#0">Троицк</a>
+							<a href="#0">Кокошкино, Марушкино, Крешкино</a>
+							<a href="#0">Воскресенское</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="foot-line">
+			<div class="container">
+				<div class="foot-policy">
+					Продолжая использовать наш сайт, вы даете согласие на обработку файлов cookies и других пользовательских данных, в соответствии с
+					<a href="#0">Политикой конфиденциальности.</a>
+				</div>
+				<img src="img/foot-payment.png" alt="alt" class="foot-payment">
+			</div>
+		</div>
+	</footer>
+	<!-- ======= FOOTER END ======= -->
 </div>
 
+<div class="hidden">
+	<form class="contact-form popup-form" id="popup-form">
 
+		<!-- Hidden Required Fields -->
+		<input type="hidden" name="project_name" value="Айнет.Ру">
+		<input type="hidden" name="admin_email" value="alexey.kobilianskiy@gmail.com">
+		<input type="hidden" name="form_subject" value="Заявка с сайта Айнет.Ру">
+		<!-- END Hidden Required Fields -->
+
+		<h3>Оставьте заявку</h3>
+		<p>Мы свяжемся с Вами в ближайшее время</p>
+
+		<div class="form-labels-wrap">
+			<label>
+				<input type="text" placeholder="Ваше имя" name="Имя" autocomplete="off" data-validation="custom"
+					   data-validation-regexp="^[a-zA-Zа-яА-Я ]{1,50}$">
+			</label>
+
+			<label>
+				<input type="text" class="user-phone" name="Телефон" placeholder="Номер телефона"
+					   autocomplete="off" data-validation="custom"
+					   data-validation-regexp="\([0-9]{3}\)\s[0-9]{3}-[0-9]{2}-[0-9]{2}">
+			</label>
+
+			<div class="btn-wrap">
+				<button type="submit" class="btn btn-accent btn-submit">Отправить</button>
+
+			</div>
+			<div class="form-policy">Нажимая на кнопку "Отправить" вы соглашаетесь на обработку <a href="#0">персональных данных</a></div>
+		</div>
+	</form>
+</div>
 
 <script src="js/scripts.min.js"></script>
 

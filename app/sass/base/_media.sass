@@ -5,11 +5,56 @@
 
 // ≥1200px
 +media-breakpoint-down(lg)
+
+  .foot-call
+    font-size: 22px
+
+  .telegram-top
+    margin-left: 30px
+
+  .top-links-1 li a
+    margin-right: 10px
+
+  .top-links-2 li
+    margin-left: 20px
+
   .body-form
     padding-right: 40px
 
 // ≥992px
 +media-breakpoint-down(md)
+
+  .foot-mnu-wrap
+    padding-left: 0
+    padding-right: 0
+    width: calc(50% - 20px)
+    a
+      line-height: 1.2
+      margin-bottom: 13px
+
+  .foot-left
+    text-align: right
+
+  .footer-wrap
+    flex-wrap: wrap
+  .foot-item
+    width: 50%
+    order: 2
+  .foot-mid
+    order: 1
+
+  .foot-acc
+    display: block
+    margin-bottom: 18px
+    width: 280px
+    margin-left: auto
+
+  .foot-call
+    margin-bottom: 25px
+
+  .foot-recall
+    width: 280px
+    margin-bottom: 15px
 
   .s-news
     padding-top: 20px
@@ -48,6 +93,27 @@
 // ≥768px
 +media-breakpoint-down(sm)
 
+  .footer-wrap
+    flex-direction: column
+
+  .foot-item
+    width: 100%
+
+  .foot-left
+    text-align: center
+    margin-top: 25px
+
+  .foot-acc
+    margin-right: auto
+
+  .foot-line
+    .container
+      flex-direction: column
+
+  .foot-policy
+    width: 100%
+    margin-bottom: 25px
+
   .body-form
     .form-labels-wrap
       flex-direction: column
@@ -74,6 +140,60 @@
 
 // ≥480px
 +media-breakpoint-down(xs)
+
+  .main-head
+    .jq-selectbox__select
+      padding-left: 0
+      width: 125px
+
+  .telegram-link
+    &>a
+      font-size: 12px
+      max-width: 140px
+      white-space: normal
+  .city-popup
+    a
+      font-size: 12px
+      padding: 12px 20px
+
+  .main-foot
+    padding-top: 30px
+
+  .foot-left
+    text-align: left
+
+  .foot-acc
+    margin-left: 0
+
+  .foot-mid
+    flex-wrap: wrap
+
+  .foot-mnu-wrap
+    width: 100%
+    ul
+      display: none
+      margin-bottom: 20px
+      li
+        padding-left: 20px
+    h3
+      padding-left: 20px
+      position: relative
+      margin-bottom: 20px
+      cursor: pointer
+      pointer-events: all
+      &:before
+        content: ''
+        position: absolute
+        width: 8px
+        height: 6px
+        background-image: url('../img/icons/select-arrow.svg')
+        +bg-cover
+        left: 0
+        top: calc(50% - 3px)
+    &.rolled
+      h3
+        &:before
+          transform: rotate(180deg)
 
   .s-news
     padding-top: 45px
@@ -187,6 +307,11 @@
 
 @media (max-width: 400px)
 
+  .telegram-link
+    &>a
+      font-size: 11px
+      max-width: 130px
+
   .s-intro
     padding-bottom: 30px
 
@@ -206,6 +331,9 @@
 
 // ≤480px
 +media-breakpoint-up(sm)
+  .foot-mnu-wrap
+    ul
+      display: block!important
 
 // ≤768px
 +media-breakpoint-up(md)

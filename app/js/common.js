@@ -107,17 +107,25 @@ $(document).ready(function(){
     $( "#tar-tabs" ).tabs();
 
     function heightses() {
-        if ($(window).width()<480) {
 
-        }
 
         $('.tar-item-title').height('auto').equalHeights();
         $('.tar-item-speedline').height('auto').equalHeights();
 
     }
 
+    if ($(window).width()<480) {
+        $('.foot-mnu-wrap').each(function(){
+            var th = $(this);
+            var h3 = th.find('h3');
+            var ul = th.find('ul');
 
-
+            h3.click(function(){
+                th.toggleClass('rolled');
+                ul.slideToggle();
+            });
+        });
+    }
 
     $(window).resize(function() {
         heightses();
@@ -125,8 +133,24 @@ $(document).ready(function(){
 
     heightses();
 
+    $('.preloader').fadeOut();
+
 
     /** FORMS START */
+
+    $(function() {
+        $("a[href='#popup-form']").magnificPopup({
+            type: "inline",
+            fixedContentPos: !1,
+            fixedBgPos: !0,
+            overflowY: "auto",
+            closeBtnInside: !0,
+            preloader: !1,
+            midClick: !0,
+            removalDelay: 300,
+            mainClass: "my-mfp-zoom-in"
+        })
+    });
 
     $('.form-select, input[type="radio"]').styler();
 
@@ -153,7 +177,6 @@ $(document).ready(function(){
 
     $('.next-stage').on('click', function(e){
         e.preventDefault();
-
         $('#mobile-name-input').validate(function(valid, elem) {
             if (valid === true) {
                 $('#mobile-phone-input').validate(function(valid, elem) {
@@ -169,15 +192,35 @@ $(document).ready(function(){
     //E-mail Ajax Send
     $(".contact-form").submit(function() { //Change
         var th = $(this);
+        th.find(".btn-submit").prop("disabled", "disabled").addClass("disabled").text("Отправлено!");
 
         $.ajax({
             type: "POST",
             url: "mail.php", //Change
             data: th.serialize()
         }).done(function() {
-
+            setTimeout(function() {
+                th.find(".btn").removeAttr('disabled').removeClass("disabled").text("Отправить");
+                th.trigger("reset");
+                $.magnificPopup.close();
+            }, 2000);
         });
         return false;
     });
     /** FORMS END */
+
+    $('.telegram-link').each(function(){
+        $(this).click(function(){
+            $(this).toggleClass('opened');
+        })
+    });
+
+    $('.city-popup a').on('click', function(e){
+        var th = $(this);
+        var val = th.text();
+        var valContainer = $('.telegram-link>a');
+
+        valContainer.text(val);
+
+    })
 });

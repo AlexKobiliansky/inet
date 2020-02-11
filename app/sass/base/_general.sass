@@ -138,6 +138,12 @@ ul
   &:hover, &:focus, &:active
     background-color: lighten($accent, 5%)
     color: #fff
+  &.disabled
+    filter: grayscale(.5)
+    pointer-events: none
+    &:hover, &:focus, &:active
+      background-color: $accent
+      color: #fff
 
 
 .owl-stage
@@ -145,6 +151,153 @@ ul
   display: -moz-box
   display: -ms-box
   display: box
+
+.popup-form
+  display: block
+  background-color: #fff
+  position: relative
+  margin-left: auto
+  margin-right: auto
+  max-width: 400px
+  padding: 50px
+  text-align: center
+  border: 1px solid #bfbfbf
+  border-radius: 20px
+  .btn
+    width: 100%
+  label
+    margin-bottom: 20px
+  .form-policy
+    font-size: 12px
+    color: #878787
+    margin-top: 10px
+
+
+//MY_MFP_ZOOM_IN
+.my-mfp-zoom-in
+  .zoom-anim-dialog, .popup-form
+    opacity: 0
+    transition: all 0.5s ease-in-out
+    transform: scale(0.7)
+  &.mfp-ready .zoom-anim-dialog, &.mfp-ready .popup-form
+    opacity: 1
+    transform: scale(1)
+  &.mfp-removing .zoom-anim-dialog, &.mfp-removing .popup-form
+    transform: scale(0.7)
+    opacity: 0
+  &.mfp-bg
+    opacity: 0
+    transition: opacity 0.5s ease-out
+  &.mfp-ready.mfp-bg
+    opacity: .9
+  &.mfp-removing.mfp-bg
+    opacity: 0
+
+
+//PRELOADER
+.sk-wave
+  width: 6em
+  height: 4em
+  margin: auto
+  text-align: center
+  font-size: 1em
+
+.sk-wave .sk-rect
+  background-color: $accent
+  height: 100%
+  width: .5em
+  display: inline-block
+  animation: sk-wave-stretch-delay 1.2s infinite ease-in-out
+
+.sk-wave .sk-rect-1
+  animation-delay: -1.2s
+
+.sk-wave .sk-rect-2
+  animation-delay: -1.1s
+
+.sk-wave .sk-rect-3
+  animation-delay: -1s
+
+.sk-wave .sk-rect-4
+  animation-delay: -0.9s
+
+.sk-wave .sk-rect-5
+  animation-delay: -0.8s
+
+
+@keyframes sk-wave-stretch-delay
+  0%, 40%, 100%
+    transform: scaleY(0.4)
+
+  20%
+    transform: scaleY(1)
+
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  width: 100%
+  height: 100%
+  z-index: 999
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: #f8f8f8
+
+
+.telegram-link
+  position: relative
+  &.telegram-top
+    .city-popup
+      top: 33px
+      &:before
+        top: -26px
+  &.telegram-foot
+    .city-popup
+      bottom: 36px
+      &:before
+        transform: rotate(180deg)
+        bottom: -26px
+  &.opened
+    .city-popup
+      display: block
+  &>a
+    //max-width: 160px
+    overflow: hidden
+    white-space: nowrap
+
+.city-popup
+  position: absolute
+  z-index: 4
+  right: 0
+  background-color: #fff
+  max-width: 400px
+  display: none
+  a
+    display: block
+    white-space: nowrap
+    font-size: 16px
+    text-decoration: none!important
+    line-height: 1
+    padding: 17px 30px
+    border-bottom: 1px solid #ebebeb
+    position: relative
+    z-index: 2
+    &:hover
+      background-color: $accent
+      color: #fff
+    &:last-child
+      border-bottom: none
+  &:before
+    content: ''
+    position: absolute
+    border: 16px solid transparent
+    border-bottom: 12px solid #fff
+    right: 84px
+
+
 
 
 
