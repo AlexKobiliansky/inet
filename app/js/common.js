@@ -222,5 +222,63 @@ $(document).ready(function(){
 
         valContainer.text(val);
 
-    })
+    });
+
+    $('.gal-wrap').photoswipe();
+
+
+
+
+    function loadScript(url, callback){
+        var script = document.createElement("script");
+
+        if (script.readyState){  // IE
+            script.onreadystatechange = function(){
+                if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                    script.onreadystatechange = null;
+                    callback();
+                }
+            };
+        } else {  // Другие браузеры
+            script.onload = function(){
+                callback();
+            };
+        }
+
+        script.src = url;
+        document.getElementsByTagName("head")[0].appendChild(script);
+    }
+
+
+    function initMap() {
+        ymaps.ready(function(){
+            var mapId = $('#map'),
+                attitude = mapId.data("att"),
+                longtitude = mapId.data("long"),
+                zoom = mapId.data("zoom"),
+                marker = mapId.data("marker"),
+                map = new ymaps.Map("map", {
+                    center: [attitude, longtitude],
+                    controls: ['zoomControl'],
+                    zoom: zoom
+                }),
+
+                myPlacemark = new ymaps.Placemark(map.getCenter(), {},
+                    {
+                        preset: 'islands#redDotIconWithCaption'
+                    });
+
+            map.geoObjects.add(myPlacemark);
+        });
+    }
+
+    if( $('#map').length )         // use this if you are using id to check
+    {
+        setTimeout(function(){
+            loadScript("https://api-maps.yandex.ru/2.1/?apikey=e470b388-a1d0-4edf-acdc-34b4bc5bedee&lang=ru_RU&loadByRequire=1", function(){
+                initMap();
+            });
+        }, 2000);
+    }
 });

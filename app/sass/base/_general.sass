@@ -24,6 +24,7 @@ body
   font-family: $default-font
   overflow-x: hidden
   color: $text
+  background-color: #f8f8f8
   input, textarea
     border: #666 1px solid
     outline: none
@@ -296,6 +297,38 @@ ul
     border: 16px solid transparent
     border-bottom: 12px solid #fff
     right: 84px
+
+.breadcrumbs
+  line-height: 1
+  padding: 33px 0
+  a
+    display: inline-block
+    color: #000
+    margin-right: 34px
+    position: relative
+    &:after
+      content: ''
+      position: absolute
+      width: 8px
+      height: 5px
+      background-image: url('../img/icons/breadcrumb-arrow.svg')
+      +bg-cover
+      transform: rotate(-90deg)
+      right: -22px
+      top: calc(50% - 2.5px)
+    &:last-child
+      pointer-events: none
+      color: #a3a3a3
+      &:after
+        display: none
+    &:hover
+      color: $accent
+
+.section-title
+  font-weight: normal
+  font-size: 30px
+  margin-bottom: 50px
+
 
 
 
